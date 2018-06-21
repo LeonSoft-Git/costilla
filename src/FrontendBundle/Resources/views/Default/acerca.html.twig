@@ -1,0 +1,78 @@
+{% extends 'FrontendBundle::layout.html.twig' %}
+
+{% block title %}Nosotros | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="banner-area-wrapper">
+        <div class="banner-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="banner-content-wrapper">
+                            <div class="banner-content">
+                                <h2>Nosotros</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-area pb-155">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-content">
+                        <h2>Escuela Primaria <span>Miguel Hidalgo y Costilla</span></h2>
+                        <p>El alumno en primaria demanda atención, ya que diariamente aprende con los cinco sentidos,
+                            es por ello que dotamos a nuestros maestros de estrategias psicopedagógicas que permiten
+                            atender las necesidades de aprendizaje de los alumnos, logrando así influir positivamente
+                            en aspectos académicos.</p>
+                        <a class="default-btn" href="{{ path('niveles') }}">Niveles Educativos</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-img">
+                        <img src="{{ asset('assets/images/welcome.jpg') }}" alt="about">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="courses-details-area blog-area pb-140">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="courses-details">
+                        <div class="course-details-content">
+                            <h2>VALORES</h2>
+                            <p class="text-justify">En la escuela primaria Miguel Hidalgo y Costilla se trabaja arduamente para establecer y
+                                formar a sus empleados valores, los cuales apoyan para la convivencia dentro de la misma, los cuales son:</p>
+                            <ul style="margin-bottom: 25px; margin-left: 15px;">
+                                <li>- Integridad</li>
+                                <li>- Alegría</li>
+                                <li>- Compromiso con los alumnos</li>
+                                <li>- Innovación</li>
+                                <li>- Creatividad</li>
+                            </ul>
+                            <div class="course-details-left" style="width: auto!important;">
+                                <div class="single-course-left">
+                                    <h3>misión</h3>
+                                    <p class="text-justify">Contribuir a la formación de seres humanos integrales mediante procesos administrativos,
+                                        pedagógicos,y ciudadanos al fomento de la convivencia pacifica, la identidad nacional,
+                                        la armonía ambiental y la pertencencia humana, estimulando el desarrollo del
+                                        pensamiento, la creatividad, y el emprendimiento.</p>
+                                </div>
+                                <div class="single-course-left">
+                                    <h3>visión</h3>
+                                    <p class="text-justify">Asegurar un ambiente educativo de calidad para todos nuestros estudiantes, que
+                                        atienda la diversidad y respete los ritmos y estilos de aprendizaje de cada uno de ellos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,1 +1,167 @@
-Hello World!
+{% extends '@Frontend/layout.html.twig' %}
+
+{% block title %}Escuela Primaria Miguel Hidalgo y Costilla{% endblock %}
+
+{% block body %}
+    <section id="slider-container" class="slider-area two">
+        <div class="slider-owl owl-theme owl-carousel">
+
+            {% for ban in banners %}
+                <div class="single-slide item" style="background-image: url({{ asset('uploads/banners/'~ban.url) }})">
+                    <div class="slider-content-area">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="slide-content-wrapper">
+                                        <div class="slide-content text-center">
+                                            <h2>{{ ban.nombre }}</h2>
+                                            <p>{{ ban.descripcion }}</p>
+                                            {% if ban.enlace is not null %}
+                                                <a class="default-btn" href="{{ ban.enlace }}">Más</a>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="choose-area pb-85 pt-77">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-left-4 col-sm-8 col-md-offset-left-4">
+                    <div class="choose-content text-left">
+                        <h2>Nuestro Ambiente Educativo</h2>
+                        <p>Damos prioridad al dominio de la lengua, tanto en español como en inglés, desarrollando
+                            habilidades lectoras y al pensamiento lógico matemático para promover el conocimiento
+                            mediante el aprendizaje colaborativo permitiendo un óptimo desarrollo en el siguiente nivel.</p>
+                        <a class="default-btn" href="{{ path('inscripciones') }}">Inscripciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="about-area pb-155">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-content">
+                        <h2>Escuela Primaria <span>Miguel Hidalgo y Costilla</span></h2>
+                        <p>El alumno en primaria demanda atención, ya que diariamente aprende con los cinco sentidos,
+                            es por ello que dotamos a nuestros maestros de estrategias psicopedagógicas que permiten
+                            atender las necesidades de aprendizaje de los alumnos, logrando así influir positivamente
+                            en aspectos académicos.</p>
+                        <a class="default-btn" href="{{ path('niveles') }}">Niveles Educativos</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="about-img">
+                        <img src="{{ asset('assets/images/welcome.jpg') }}" alt="about">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="testimonial-area pt-110 pb-105 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="testimonial-owl owl-theme owl-carousel">
+                    <div class="col-md-8 col-md-offset-2 col-sm-12">
+                        <div class="single-testimonial">
+                            <div class="testimonial-info">
+                                <div class="testimonial-img">
+                                    <img src="{{ asset('assets/images/director.jpg') }}" alt="testimonial">
+                                </div>
+                                <div class="testimonial-content">
+                                    <p>Mejor que mil días de estudio diligente es un día con un gran maestro.</p>
+                                    <h4>David Morgan</h4>
+                                    <h5>Director</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% if app.user.tipo is defined %}
+        <div class="blog-area pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center">
+                            <img src="{{ asset('template/img/icon/section.png') }}" alt="section-title">
+                            <h2>LATEST FROM BLOG</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-blog">
+                            <div class="blog-img">
+                                <a href="#"><img src="{{ asset('template/img/blog/blog1.jpg') }}" alt="blog"></a>
+                                <div class="blog-hover">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <h2><a href="#">I must explain to you how all this a mistaken idea </a></h2>
+                                    <a href="#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-blog">
+                            <div class="blog-img">
+                                <a href="#"><img src="{{ asset('template/img/blog/blog2.jpg') }}" alt="blog"></a>
+                                <div class="blog-hover">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <h2><a href="#">I must explain to you how all this a mistaken idea </a></h2>
+                                    <a href="#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 hidden-sm col-xs-12">
+                        <div class="single-blog">
+                            <div class="blog-img">
+                                <a href="#"><img src="{{ asset('template/img/blog/blog3.jpg') }}" alt="blog"></a>
+                                <div class="blog-hover">
+                                    <a href="#"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-top">
+                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
+                                </div>
+                                <div class="blog-bottom">
+                                    <h2><a href="#">I must explain to you how all this a mistaken idea </a></h2>
+                                    <a href="#">read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

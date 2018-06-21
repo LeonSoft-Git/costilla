@@ -1,0 +1,62 @@
+{% extends 'FrontendBundle::layout.html.twig' %}
+
+{% block title %}Galería | {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('assets/css/lightgallery.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('assets/js/lightgallery.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $("#lightgallery").lightGallery({
+                download : false,
+                startClass: 'lg-start-zoom',
+                selector: '.light-photo'
+            });
+        });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="banner-area-wrapper">
+        <div class="banner-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="banner-content-wrapper">
+                            <div class="banner-content">
+                                <h2>Galería</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="teacher-area pt-150 pb-105">
+        <div class="container">
+            <div class="row" id="lightgallery">
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="single-teacher">
+                        <div class="single-teacher-img">
+                            <a class="light-photo" href="{{ asset('uploads/banners/07fbbd52403eb6064106d98a96ddc247.jpeg') }}">
+                                <img src="{{ asset('template/img/teacher/teacher1.jpg') }}" alt="teacher">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="single-teacher">
+                        <div class="single-teacher-img">
+                            <a class="light-photo" href="{{ asset('uploads/banners/824902b0770d5136ab1f7b703acb7522.jpeg') }}">
+                                <img src="{{ asset('template/img/teacher/teacher1.jpg') }}" alt="teacher">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

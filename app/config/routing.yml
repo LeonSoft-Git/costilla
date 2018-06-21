@@ -1,3 +1,18 @@
+core_banners:
+    resource: "@AdminBundle/Controller/BannersController.php"
+    type:     annotation
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+logoutadmin:
+    path: /admin/logout
+
+logout:
+    path: /logout
+
 frontend:
     resource: "@FrontendBundle/Controller/"
     type:     annotation
