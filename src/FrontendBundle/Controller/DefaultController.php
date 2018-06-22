@@ -38,6 +38,14 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/avisos", name="avisos")
+     */
+    public function avisosAction()
+    {
+        return $this->render('FrontendBundle:Default:avisos.html.twig');
+    }
+
+    /**
      * @Route("/niveles-educativos", name="niveles")
      */
     public function nivelesAction(Request $request){
