@@ -9,7 +9,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * CoreBundle\Entity\Avisos
  *
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="CoreBundle\Entity\AvisosRepository")
  * @ORM\Table(name="avisos")
  */
 class Avisos

@@ -4,6 +4,7 @@ namespace FrontendBundle\Controller;
 
 use CoreBundle\Entity\Contacto;
 use FrontendBundle\Form\ContactoType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -38,11 +39,26 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/avisos", name="avisos")
+     * @Route("/avisos/{page}", name="avisos")
+     * @Method("GET")
      */
-    public function avisosAction()
+    public function avisosAction($page  = 1)
     {
-        return $this->render('FrontendBundle:Default:avisos.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $limit = 9;
+        $avisos = $em->getRepository('CoreBundle:Avisos')->getAllPers($page, $limit);
+        $avisosResultado = $avisos['paginator'];
+        $avisosQueryCompleta =  $avisos['query'];
+
+        $maxPages = ceil($avisos['paginator']->count() / $limit);
+
+        return $this->render('FrontendBundle:Default:avisos.html.twig',array(
+            'avisos' => $avisosResultado,
+            'maxPages'=>$maxPages,
+            'thisPage' => $page,
+            'all_items' => $avisosQueryCompleta
+        ));
     }
 
     /**
