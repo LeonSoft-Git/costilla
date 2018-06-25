@@ -1,3 +1,15 @@
+core_administradores:
+    resource: "@AdminBundle/Controller/UsuariosController.php"
+    type:     annotation
+
+core_usuarios:
+    resource: "@AdminBundle/Controller/UsuariosController.php"
+    type:     annotation
+
+core_fotos:
+    resource: "@AdminBundle/Controller/FotosController.php"
+    type:     annotation
+
 core_banners:
     resource: "@AdminBundle/Controller/BannersController.php"
     type:     annotation

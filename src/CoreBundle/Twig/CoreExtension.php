@@ -14,8 +14,6 @@ class CoreExtension extends \Twig_Extension
         return array(
             new \Twig_SimpleFilter('sino', array($this, 'sinoFilter'), array('is_safe' => array('html'))),
             new \Twig_SimpleFilter('tipo', array($this, 'tipoFilter'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFilter('tipoArc', array($this, 'tipoArchivoFilter'), array('is_safe' => array('html'))),
-            new \Twig_SimpleFilter('categoria', array($this, 'categoriaFilter'), array('is_safe' => array('html'))),
         );
     }
 
@@ -33,37 +31,11 @@ class CoreExtension extends \Twig_Extension
     public function tipoFilter($value){
         $result='';
         if($value==1){
-            $result='SuperUsuario';
+            $result='SuperAdmin';
         }elseif($value==2){
             $result='Administrador';
         }elseif ($value==3){
-            $result='Capacitador';
-        }
-        return $result;
-    }
-
-    public function tipoArchivoFilter($value){
-        $result='';
-        if($value==1){
-            $result='Prácticas';
-        }elseif($value==2){
-            $result='Manuales';
-        }elseif ($value==3){
-            $result='Anexos';
-        }
-        return $result;
-    }
-
-    public function categoriaFilter($value){
-        $result='';
-        if($value==1){
-            $result='Excel';
-        }elseif($value==2){
-            $result='PowerPoint';
-        }elseif ($value==3){
-            $result='Word';
-        }elseif ($value==4){
-            $result='Anexos';
+            $result='Usuario';
         }
         return $result;
     }

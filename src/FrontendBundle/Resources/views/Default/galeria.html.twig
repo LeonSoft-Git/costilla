@@ -38,24 +38,17 @@
     <div class="teacher-area pt-150 pb-105">
         <div class="container">
             <div class="row" id="lightgallery">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="single-teacher">
-                        <div class="single-teacher-img">
-                            <a class="light-photo" href="{{ asset('uploads/banners/07fbbd52403eb6064106d98a96ddc247.jpeg') }}">
-                                <img src="{{ asset('template/img/teacher/teacher1.jpg') }}" alt="teacher">
-                            </a>
+                {% for foto in fotos %}
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                        <div class="single-teacher">
+                            <div class="single-teacher-img">
+                                <a class="light-photo" href="{{ asset('uploads/galeria/'~foto.url) }}">
+                                    <img src="{{ asset('uploads/galeria/'~foto.url) }}" width="270" height="270" alt="{{ foto.nombre }}">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="single-teacher">
-                        <div class="single-teacher-img">
-                            <a class="light-photo" href="{{ asset('uploads/banners/824902b0770d5136ab1f7b703acb7522.jpeg') }}">
-                                <img src="{{ asset('template/img/teacher/teacher1.jpg') }}" alt="teacher">
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

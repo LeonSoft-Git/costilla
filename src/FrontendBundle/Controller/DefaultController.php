@@ -35,7 +35,9 @@ class DefaultController extends Controller
      */
     public function galeriaAction()
     {
-        return $this->render('FrontendBundle:Default:galeria.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $fotos = $em->getRepository('CoreBundle:Fotos')->findBy(array('activo'=>1));
+        return $this->render('FrontendBundle:Default:galeria.html.twig',array('fotos'=>$fotos));
     }
 
     /**

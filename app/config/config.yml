@@ -13,6 +13,7 @@ parameters:
     locale: es_MX
     dev_mail: 'cesar.rios@capacitacioninformatica.com'
     ban_directory: '%kernel.root_dir%/../web/uploads/banners'
+    gal_directory: '%kernel.root_dir%/../web/uploads/galeria'
 
 framework:
     #esi:             ~

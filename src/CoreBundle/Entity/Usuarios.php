@@ -406,9 +406,9 @@ class Usuarios implements UserInterface, \Serializable
 
     public function getRoles()
     {
-        if($this->getTipo()==1){
+        if($this->getTipo()==1 || $this->getTipo()==2){
             return array('ROLE_ADMIN');
-        }elseif ($this->getTipo()==2){
+        }elseif ($this->getTipo()==3){
             return array('ROLE_USER');
         }
     }

@@ -22,9 +22,26 @@ class Avisos
     protected $id;
 
     /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $nombre;
+
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    protected $imagen;
+
+    /**
      * @ORM\Column(type="text", nullable=true)
      */
     protected $mensaje;
+
+    /**
+     * @Gedmo\Slug(separator="-", updatable=true, fields={"nombre"})
+     *
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $slug;
 
     /**
      * @ORM\Column(type="integer", nullable=true)
@@ -92,6 +109,48 @@ class Avisos
     }
 
     /**
+     * Set the value of nombre.
+     *
+     * @param string $nombre
+     * @return \CoreBundle\Entity\Avisos
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+        return $this;
+    }
+    /**
+     * Get the value of nombre.
+     *
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * Set the value of imagen.
+     *
+     * @param string $imagen
+     * @return \CoreBundle\Entity\Avisos
+     */
+    public function setImagen($imagen)
+    {
+        $this->imagen = $imagen;
+        return $this;
+    }
+    /**
+     * Get the value of imagen.
+     *
+     * @return string
+     */
+    public function getImagen()
+    {
+        return $this->imagen;
+    }
+
+    /**
      * Set the value of mensaje.
      *
      * @param string $mensaje
@@ -112,6 +171,27 @@ class Avisos
     public function getMensaje()
     {
         return $this->mensaje;
+    }
+
+    /**
+     * Set the value of slug.
+     *
+     * @param string $slug
+     * @return \CoreBundle\Entity\Avisos
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+    /**
+     * Get the value of slug.
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 
     /**
@@ -280,6 +360,6 @@ class Avisos
 
     public function __sleep()
     {
-        return array('id', 'mensaje', 'tipo', 'activo', 'created_at', 'updated_at');
+        return array('id','nombre','imagen', 'mensaje','slug', 'tipo', 'activo', 'created_at', 'updated_at');
     }
 }
