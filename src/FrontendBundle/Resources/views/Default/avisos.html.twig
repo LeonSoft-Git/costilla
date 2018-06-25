@@ -26,18 +26,18 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="single-blog mb-60">
                             <div class="blog-img">
-                                <a href="#"><img src="{{ asset('template/img/blog/blog1.jpg') }}" alt="blog"></a>
+                                <a href="{{ path('aviso-pagina',{'slug':a.slug}) }}"><img src="{{ asset('uploads/avisos/'~a.imagen) }}" alt="blog"></a>
                                 <div class="blog-hover">
                                     <i class="fa fa-link"></i>
                                 </div>
                             </div>
                             <div class="blog-content">
                                 <div class="blog-top">
-                                    <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
+                                    <p>Por {{ a.usuarios.user }}  /  {{ a.createdAt|date('M d, Y') }}  /  <i class="fa fa-comments-o"></i> 4</p>
                                 </div>
                                 <div class="blog-bottom">
-                                    <h2><a href="blog-details.html">{{ a.mensaje }}</a></h2>
-                                    <a href="blog-details.html">read more</a>
+                                    <h2><a href="{{ path('aviso-pagina',{'slug':a.slug}) }}">{{ a.nombre }}</a></h2>
+                                    <a href="{{ path('aviso-pagina',{'slug':a.slug}) }}">leer más</a>
                                 </div>
                             </div>
                         </div>

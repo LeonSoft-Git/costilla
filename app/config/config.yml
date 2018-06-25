@@ -14,6 +14,7 @@ parameters:
     dev_mail: 'cesar.rios@capacitacioninformatica.com'
     ban_directory: '%kernel.root_dir%/../web/uploads/banners'
     gal_directory: '%kernel.root_dir%/../web/uploads/galeria'
+    avi_directory: '%kernel.root_dir%/../web/uploads/avisos'
 
 framework:
     #esi:             ~

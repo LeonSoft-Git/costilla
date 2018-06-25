@@ -1,3 +1,7 @@
+core_avisos:
+    resource: "@AdminBundle/Controller/AvisosController.php"
+    type:     annotation
+
 core_administradores:
     resource: "@AdminBundle/Controller/UsuariosController.php"
     type:     annotation

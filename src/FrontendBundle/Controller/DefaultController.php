@@ -206,4 +206,16 @@ class DefaultController extends Controller
             'enviado' => $enviado,
         ));
     }
+
+    /**
+     * @Route("/{slug}", name="aviso-pagina")
+     * @Method({"GET","POST"})
+     */
+    public function avisoPaginaAction(Request $request,$slug){
+        $em = $this->getDoctrine()->getManager();
+        $aviso = $em->getRepository('CoreBundle:Avisos')->findOneBy(array('slug'=>$slug));
+        return $this->render('@Frontend/Default/aviso-pagina.html.twig',array(
+            'aviso'=>$aviso
+        ));
+    }
 }

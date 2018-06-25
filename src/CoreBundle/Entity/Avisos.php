@@ -10,7 +10,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
  * CoreBundle\Entity\Avisos
  *
  * @ORM\Entity(repositoryClass="CoreBundle\Entity\AvisosRepository")
- * @ORM\Table(name="avisos")
+ * @ORM\Table(name="avisos", indexes={@ORM\Index(name="fk_avisos_usuarios1_idx", columns={"usuarios_id"})})
  */
 class Avisos
 {
@@ -79,6 +79,12 @@ class Avisos
      */
     protected $comentarios;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Usuarios", inversedBy="avisos")
+     * @ORM\JoinColumn(name="usuarios_id", referencedColumnName="id")
+     */
+    protected $usuarios;
+
     public function __construct()
     {
         $this->archivos = new ArrayCollection();
@@ -106,6 +112,29 @@ class Avisos
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set the value of usuarios_id.
+     *
+     * @param integer $usuarios_id
+     * @return \CoreBundle\Entity\Avisos
+     */
+    public function setUsuariosId($usuarios_id)
+    {
+        $this->usuarios_id = $usuarios_id;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of usuarios_id.
+     *
+     * @return integer
+     */
+    public function getUsuariosId()
+    {
+        return $this->usuarios_id;
     }
 
     /**
@@ -358,8 +387,31 @@ class Avisos
         return $this->comentarios;
     }
 
+    /**
+     * Set Usuarios entity (many to one).
+     *
+     * @param \CoreBundle\Entity\Usuarios $usuarios
+     * @return \CoreBundle\Entity\Avisos
+     */
+    public function setUsuarios(Usuarios $usuarios = null)
+    {
+        $this->usuarios = $usuarios;
+
+        return $this;
+    }
+
+    /**
+     * Get Usuarios entity (many to one).
+     *
+     * @return \CoreBundle\Entity\Usuarios
+     */
+    public function getUsuarios()
+    {
+        return $this->usuarios;
+    }
+
     public function __sleep()
     {
-        return array('id','nombre','imagen', 'mensaje','slug', 'tipo', 'activo', 'created_at', 'updated_at');
+        return array('id','nombre','usuarios_id','imagen', 'mensaje','slug', 'tipo', 'activo', 'created_at', 'updated_at');
     }
 }

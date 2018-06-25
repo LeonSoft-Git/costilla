@@ -82,6 +82,12 @@ class Usuarios implements UserInterface, \Serializable
     protected $updated_at;
 
     /**
+     * @ORM\OneToMany(targetEntity="Avisos", mappedBy="usuarios")
+     * @ORM\JoinColumn(name="id", referencedColumnName="usuarios_id", nullable=false)
+     */
+    protected $avisos;
+
+    /**
      * @ORM\OneToMany(targetEntity="Comentarios", mappedBy="usuarios")
      * @ORM\JoinColumn(name="id", referencedColumnName="usuarios_id", nullable=false)
      */
@@ -366,6 +372,42 @@ class Usuarios implements UserInterface, \Serializable
     public function getUpdatedAt()
     {
         return $this->updated_at;
+    }
+
+    /**
+     * Add Avisos entity to collection (one to many).
+     *
+     * @param \CoreBundle\Entity\Avisos $avisos
+     * @return \CoreBundle\Entity\Usuarios
+     */
+    public function addAvisos(Avisos $avisos)
+    {
+        $this->avisos[] = $avisos;
+
+        return $this;
+    }
+
+    /**
+     * Remove Avisos entity from collection (one to many).
+     *
+     * @param \CoreBundle\Entity\Avisos $avisos
+     * @return \CoreBundle\Entity\Usuarios
+     */
+    public function removeAvisos(Avisos $avisos)
+    {
+        $this->avisos->removeElement($avisos);
+
+        return $this;
+    }
+
+    /**
+     * Get Avisos entity collection (one to many).
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getAvisos()
+    {
+        return $this->avisos;
     }
 
     /**
