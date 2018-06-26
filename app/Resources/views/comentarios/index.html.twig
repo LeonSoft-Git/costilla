@@ -1,0 +1,51 @@
+    {% extends '@Admin/base.html.twig' %}
+{% block navegacion %}
+{{ include('@Admin/partials/navegacion.html.twig',{'menu':'CI','submenu':'Comentarios'}) }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('admin/plugins/bower_components/datatables/jquery.dataTables.min.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('admin/plugins/bower_components/datatables/jquery.dataTables.min.js') }}"></script><script>
+    $(document).ready(function(){
+        $('#myTable').DataTable();
+    });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="white-box">
+                <h3 class="box-title m-b-0">Comentarios</h3>
+               {#<p class="text-muted m-b-30">{{ Comentarios</p>#}
+                <table id="myTable" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>No.</th>  <th>Comentario</th> <th>Aviso</th> <th>Contestado</th> <th>Activo</th>  <th>Fecha</th><th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% set i = 1 %}
+                    {% for comentario in comentarios %}
+                    <tr>
+                        <td>{{ i }}</td>    <td>{{ comentario.comentario }}</td> <td>{{ comentario.avisos.nombre }}</td> <td>{% if comentario.id in check %}{{ 1|sino }}{% else %}{{ 0|sino }}{% endif %}</td> <td>{{ comentario.activo|sino }}</td>   <td>{% if comentario.createdat %}{{ comentario.createdat|date('Y-m-d H:i:s') }}{% endif %}</td>           <td>
+                                    <div class="btn-group btn-group-xs">
+                                        <a href="{{ path('comentarios_show', { 'id': comentario.id }) }}" data-toggle="tooltip" title="Ver" class="btn btn-default"><i class="fa fa-list-ul"></i></a>
+                                        <a href="{{ path('comentarios_edit', { 'id': comentario.id }) }}" data-toggle="tooltip" title="Editar" class="btn btn-default"><i class="fa fa-edit"></i></a>
+                                    </div>
+                                </td>
+                    </tr>
+                    {% set i=i+1 %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}

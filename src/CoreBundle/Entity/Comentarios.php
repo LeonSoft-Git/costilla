@@ -26,6 +26,16 @@ class Comentarios
     protected $comentario;
 
     /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $tipo;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    protected $respuesta;
+
+    /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     protected $activo;
@@ -153,6 +163,52 @@ class Comentarios
     }
 
     /**
+     * Set the value of tipo.
+     *
+     * @param integer $tipo
+     * @return \CoreBundle\Entity\Comentarios
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of tipo.
+     *
+     * @return integer
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * Set the value of respuesta.
+     *
+     * @param integer $respuesta
+     * @return \CoreBundle\Entity\Comentarios
+     */
+    public function setRespuesta($respuesta)
+    {
+        $this->respuesta = $respuesta;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of respuesta.
+     *
+     * @return integer
+     */
+    public function getRespuesta()
+    {
+        return $this->respuesta;
+    }
+
+    /**
      * Set the value of activo.
      *
      * @param boolean $activo
@@ -269,6 +325,6 @@ class Comentarios
 
     public function __sleep()
     {
-        return array('id', 'usuarios_id', 'avisos_id', 'comentario', 'activo', 'created_at', 'updated_at');
+        return array('id', 'usuarios_id', 'avisos_id', 'comentario','tipo','respuesta', 'activo', 'created_at', 'updated_at');
     }
 }

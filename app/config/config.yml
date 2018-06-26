@@ -15,6 +15,7 @@ parameters:
     ban_directory: '%kernel.root_dir%/../web/uploads/banners'
     gal_directory: '%kernel.root_dir%/../web/uploads/galeria'
     avi_directory: '%kernel.root_dir%/../web/uploads/avisos'
+    arch_directory: '%kernel.root_dir%/../web/uploads/archivos'
 
 framework:
     #esi:             ~

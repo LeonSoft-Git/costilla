@@ -91,6 +91,11 @@ class Avisos
         $this->comentarios = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return $this->nombre;
+    }
+
     /**
      * Set the value of id.
      *

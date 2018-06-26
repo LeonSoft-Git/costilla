@@ -1,0 +1,59 @@
+    {% extends '@Admin/base.html.twig' %}
+{% block navegacion %}
+{{ include('@Admin/partials/navegacion.html.twig',{'menu':'CI','submenu':'Comentarios'}) }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+<script src="{{ asset('admin/js/jasny-bootstrap.js') }}"></script>
+{% endblock %}
+
+    {% block body %}
+        {% if respuesta == null %}
+            <style>
+                .help-block{
+                    color: red!important;
+                }
+            </style>
+        {% endif %}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="white-box">
+                <h3 class="box-title m-b-0">Ver Comentario</h3>                <form class="form-horizontal" role="form">                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Id</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">                                        {{ comentario.id }}                                </p>
+                            </div>
+                        </div>                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Comentario</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">                                        {{ comentario.comentario }}                                </p>
+                            </div>
+                        </div>                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Activo</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">                                 {{ comentario.activo|sino }}</p>
+                            </div>
+                        </div>                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Enviado</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">                                        {% if comentario.createdat %}{{ comentario.createdat|date('Y-m-d H:i:s') }}{% endif %}                                </p>
+                            </div>
+                        </div>                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Respuesta</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static {% if respuesta == null %}help-block{% endif %}">                 {% if respuesta == null %}Se necesita responder esta duda.{% else %}{{ respuesta.comentario }}{% endif %}                              </p>
+                            </div>
+                        </div>                        <div class="form-group m-b-0">
+                        <div class="col-sm-12">
+                                                                    <a class="btn btn-inverse waves-effect waves-light m-t-10" style="float:left; margin:5px;" href="{{ path('comentarios_index') }}">Regresar</a>            <a class="btn btn-info waves-effect waves-light m-t-10" style="float:left;  margin:5px;"  href="{{ path('comentarios_edit', { 'id': comentario.id }) }}">Editar</a> {% if respuesta == null %}<a class="btn btn-success waves-effect waves-light m-t-10" style="float:left; margin:5px;" href="{{ path('comentarios_new',{'id':comentario.id}) }}">Responder</a>{% endif %}</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

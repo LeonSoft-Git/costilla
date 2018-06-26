@@ -33,7 +33,13 @@
                             </div>
                             <div class="blog-content">
                                 <div class="blog-top">
-                                    <p>Por {{ a.usuarios.user }}  /  {{ a.createdAt|date('M d, Y') }}  /  <i class="fa fa-comments-o"></i> 4</p>
+                                    <p>Por {{ a.usuarios.user }}  /  {{ a.createdAt|date('M d, Y') }}  /  <i class="fa fa-comments-o"></i>
+                                        {% for n in num %}
+                                            {% if n.id == a.id %}
+                                                {{ n.num }}
+                                            {% endif %}
+                                        {% endfor %}
+                                    </p>
                                 </div>
                                 <div class="blog-bottom">
                                     <h2><a href="{{ path('aviso-pagina',{'slug':a.slug}) }}">{{ a.nombre }}</a></h2>

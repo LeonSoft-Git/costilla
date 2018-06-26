@@ -1,3 +1,11 @@
+core_archivos:
+    resource: "@AdminBundle/Controller/ArchivosController.php"
+    type:     annotation
+
+core_comentarios:
+    resource: "@AdminBundle/Controller/ComentariosController.php"
+    type:     annotation
+
 core_avisos:
     resource: "@AdminBundle/Controller/AvisosController.php"
     type:     annotation
