@@ -253,7 +253,7 @@
     .event-content-right a{display: block}
     .service-area h3, .course-content h3 {font-size: 18px}
     .event-area.two .event-content h4 a, .event-area.three .event-content h4 a {font-size: 17px}
-    .header-area.two .logo {padding: 25px 0 21px}
+    .header-area.two .logo {padding: 21px 0 21px}
     .search-btn {top: 32px}
     .search {top: 64px;}
     .header-area.two .mean-container a.meanmenu-reveal {margin-top: -63px}
@@ -275,5 +275,8 @@
     .slide-content h3 {padding-top: 40px}
     .sticky .logo{width: 80%}
     .single-widget.instagram {padding-right: 70px}
-    
+}
+
+@media only screen and (max-width: 480px) {
+    .header-area.two .logo {padding: 10px 0 10px}
 }

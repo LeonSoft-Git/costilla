@@ -24,6 +24,10 @@ class BannersController extends Controller
      */
     public function indexAction()
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==2){
+            return $this->redirect($this->generateUrl('admin_home'));
+        }
         $em = $this->getDoctrine()->getManager();
 
         $banners = $em->getRepository('CoreBundle:Banners')->findAll();
@@ -41,6 +45,10 @@ class BannersController extends Controller
      */
     public function newAction(Request $request)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==2){
+            return $this->redirect($this->generateUrl('admin_home'));
+        }
         $banner = new Banners();
         $form = $this->createForm('CoreBundle\Form\BannersType', $banner);
         $form->handleRequest($request);
@@ -78,6 +86,10 @@ class BannersController extends Controller
      */
     public function showAction(Banners $banner)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==2){
+            return $this->redirect($this->generateUrl('admin_home'));
+        }
         $deleteForm = $this->createDeleteForm($banner);
 
         return $this->render('banners/show.html.twig', array(
@@ -94,6 +106,10 @@ class BannersController extends Controller
      */
     public function editAction(Request $request, Banners $banner)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==2){
+            return $this->redirect($this->generateUrl('admin_home'));
+        }
         $deleteForm = $this->createDeleteForm($banner);
         $editForm = $this->createForm('CoreBundle\Form\BannersType', $banner);
         $tmp = $banner->getUrl();
@@ -136,6 +152,10 @@ class BannersController extends Controller
      */
     public function deleteAction(Request $request, Banners $banner)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==2){
+            return $this->redirect($this->generateUrl('admin_home'));
+        }
         $form = $this->createDeleteForm($banner);
         $form->handleRequest($request);
 

@@ -236,7 +236,7 @@ class DefaultController extends Controller
      */
     public function registrarAction(Request $request){
         $user = $this->get('security.token_storage')->getToken()->getUser();
-        if($user->getTipo()==3){
+        if($user!='anon.'){
             return $this->redirect($this->generateUrl('homepage'));
         }
         $form = $this->createForm(RegistroType::class,null,array(
@@ -261,16 +261,16 @@ class DefaultController extends Controller
                     }
                     $enviado = 2;
                 }else{
-                    /*$message = \Swift_Message::newInstance()
-                    ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
-                    ->setFrom($data['email'])
+                    $message = \Swift_Message::newInstance()
+                    ->setSubject('Miguel Hidalgo y Costilla WebPage - Registro')
+                    ->setFrom($data->getEmail())
                     //->setTo(array('contacto@capacitacioninformatica.com'))
                     ->setTo(array('cesar.rios@capacitacioninformatica.com'))
                     ->setBody(
-                        $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
+                        $this->renderView('@Frontend/mail/register.html.twig',array('usuario'=>$data,)),
                         'text/html'
                     )
-                ;*/
+                ;
                     $usuario = new Usuarios();
                     $usuario->setNombre($data->getNombre());
                     $usuario->setApellido($data->getApellido());
@@ -281,7 +281,7 @@ class DefaultController extends Controller
                     $usuario->setTipo(3);
                     $em->persist($usuario);
                     $em->flush();
-                    //$this->get('mailer')->send($message);
+                    $this->get('mailer')->send($message);
 
                     $enviado=1;
                 }
@@ -319,22 +319,23 @@ class DefaultController extends Controller
             if($form->isValid()){
                 $data = $form->getData();
                 $user = $this->get('security.token_storage')->getToken()->getUser();
-                /*$message = \Swift_Message::newInstance()
-                    ->setSubject('Comentario en la Pagina Web')
-                    ->setFrom($data['email'])
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
-                    ->setBody(
-                        $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
-                        'text/html'
-                    )
-                ;*/
 
                 if(gettype($user)=='string'){
                     $usuario = $em->getRepository('CoreBundle:Usuarios')->findOneBy(array('user'=>'developer'));
                 }else{
                     $usuario = $user;
                 }
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Comentario en la Pagina Web')
+                    ->setFrom($usuario->getEmail())
+                    //->setTo(array('contacto@capacitacioninformatica.com'))
+                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setBody(
+                        $this->renderView('@Frontend/mail/comentario.html.twig',array('comentario'=>$data,'aviso'=>$aviso,'usuario'=>$usuario)),
+                        'text/html'
+                    )
+                ;
 
                 $check = $em->getRepository('CoreBundle:Comentarios')->findOneBy(array('usuarios'=>$usuario,'avisos'=>$aviso,'comentario'=>$data->getComentario()));
                 if(!$check){
@@ -346,8 +347,7 @@ class DefaultController extends Controller
                     $comentario->setUsuarios($usuario);
                     $em->persist($comentario);
                     $em->flush();
-                    //$this->get('mailer')->send($message);
-
+                    $this->get('mailer')->send($message);
                     $enviado=1;
                 }else{
                     $enviado=2;

@@ -89,6 +89,18 @@ class UsuariosController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            if($usuario->getValido()==1){
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Miguel Hidalgo y Costilla WebPage - Confirmación de Registro')
+                    ->setFrom($usuario->getEmail())
+                    //->setTo(array('contacto@capacitacioninformatica.com'))
+                    ->setTo(array($usuario->getEmail()))
+                    ->setBody(
+                        $this->renderView('@Frontend/mail/register.html.twig',array('usuario'=>$usuario,)),
+                        'text/html'
+                    );
+                $this->get('mailer')->send($message);
+            }
             $usuario->setTipo(3);
             $em->persist($usuario);
             $em->flush();
