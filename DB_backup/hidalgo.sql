@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2018 a las 17:52:02
+-- Tiempo de generación: 27-06-2018 a las 18:02:32
 -- Versión del servidor: 10.1.32-MariaDB
 -- Versión de PHP: 5.6.36
 
@@ -122,7 +122,8 @@ INSERT INTO `comentarios` (`id`, `usuarios_id`, `avisos_id`, `comentario`, `acti
 (1, 2, 1, 'quiero mas info de la pagina', 1, '2018-06-26 19:20:49', '2018-06-26 19:20:49', 1, NULL),
 (2, 2, 1, 'hola', 1, '2018-06-26 19:26:54', '2018-06-26 19:26:54', 1, NULL),
 (3, 1, 1, 'que informacion necesitas?', 1, '2018-06-26 13:49:22', '2018-06-26 13:49:22', 2, 1),
-(4, 2, 1, 'gracias', 1, '2018-06-26 14:43:21', '2018-06-26 14:43:21', 1, NULL);
+(4, 2, 1, 'gracias', 1, '2018-06-26 14:43:21', '2018-06-26 14:43:21', 1, NULL),
+(5, 2, 1, 'necesito me contacten por correo francia@test.com', 1, '2018-06-27 17:35:33', '2018-06-27 17:35:33', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -237,7 +238,8 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `email`, `user`, `password`, `tipo`, `activo`, `valido`, `salt`, `created_at`, `updated_at`) VALUES
 (1, 'cesar', 'rios', 'cesar.rios@capacitacioninformatica.com', 'developer', '123456', 1, 1, 1, NULL, '2018-06-09 00:00:00', '2018-06-09 00:00:00'),
 (2, 'francia', 'vallejo', 'francia@test.com', 'francia', '123456', 3, 1, 1, NULL, '2018-06-09 00:00:00', '2018-06-25 19:37:33'),
-(3, 'User', 'Admin', 'admin@test.com', 'admin', '123456', 2, 1, NULL, NULL, '2018-06-25 20:10:07', '2018-06-25 20:10:07');
+(3, 'User', 'Admin', 'admin@test.com', 'admin', '123456', 2, 1, 1, NULL, '2018-06-25 20:10:07', '2018-06-25 20:10:07'),
+(4, 'Usuario', 'Pruebas', 'test@test.com', 'usuario', '123456', 3, 1, NULL, NULL, '2018-06-27 17:26:41', '2018-06-27 17:26:41');
 
 --
 -- Índices para tablas volcadas
@@ -339,7 +341,7 @@ ALTER TABLE `banners`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `contacto`
@@ -375,7 +377,7 @@ ALTER TABLE `suscriptores`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
