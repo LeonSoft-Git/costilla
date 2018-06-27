@@ -81,6 +81,11 @@
                                 <p class="form-control-static">                   {{ usuario.activo|sino }} </p>
                             </div>
                         </div>                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Válido</label>
+                            <div class="col-sm-10">
+                                <p class="form-control-static">                   {{ usuario.valido|sino }} </p>
+                            </div>
+                        </div>                        <div class="form-group">
                             <label class="col-sm-2 control-label">Creado</label>
                             <div class="col-sm-10">
                                 <p class="form-control-static">                                        {% if usuario.createdat %}{{ usuario.createdat|date('Y-m-d H:i:s') }}{% endif %}                                </p>

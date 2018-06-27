@@ -46,7 +46,7 @@
                         {% else %}
                             <ul>
                                 <li><a href="{{ path('login') }}">Ingresar</a></li>
-                                <li><a href="#">Registrarse</a></li>
+                                <li><a href="{{ path('registrar') }}">Registrarse</a></li>
                             </ul>
                         {% endif %}
                     </div>
@@ -152,7 +152,9 @@
                             <li><a href="{{ path('niveles') }}">Niveles Educativos</a></li>
                             <li><a href="{{ path('galeria') }}">Galería</a></li>
                             <li><a href="{{ path('inscripciones') }}">Inscripciones</a></li>
-                            <li><a href="{{ path('avisos') }}">Avisos</a></li>
+                            {% if app.user.tipo is defined %}
+                                <li><a href="{{ path('avisos') }}">Avisos</a></li>
+                            {% endif %}
                             <li><a href="{{ path('contacto') }}">Contacto</a></li>
                         </ul>
                     </div>

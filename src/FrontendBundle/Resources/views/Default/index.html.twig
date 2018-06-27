@@ -91,6 +91,7 @@
         </div>
     </div>
 
+    {% if app.user.tipo is defined %}
         <div class="blog-area pt-150 pb-150">
             <div class="container">
                 <div class="row">
@@ -132,4 +133,6 @@
                 </div>
             </div>
         </div>
+    {% endif %}
+
 {% endblock %}

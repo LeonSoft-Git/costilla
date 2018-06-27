@@ -20,7 +20,8 @@ class UsuariosType extends AbstractType
             ->add('email')
             ->add('user',TextType::class,array('label'=>'Username'))
             ->add('password')
-            ->add('activo');
+            ->add('activo')
+            ->add('valido');
 }
 
 /**

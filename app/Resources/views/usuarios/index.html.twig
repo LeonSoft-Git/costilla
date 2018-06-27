@@ -26,14 +26,14 @@
                 <table id="myTable" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>No.</th> <th>Nombre</th>  <th>Apellido</th>  <th>Username</th> <th>Tipo</th>                            <th>Activo</th>              <th>Opciones</th>
+                        <th>No.</th> <th>Nombre</th> <th>Username</th> <th>Tipo</th>  <th>Activo</th>  <th>Válido</th>            <th>Opciones</th>
                     </tr>
                     </thead>
                     <tbody>
                     {% set i = 1 %}
                     {% for usuario in usuarios %}
                     <tr>
-                        <td>{{ i }}</td> <td>{{ usuario.nombre }}</td>  <td>{{ usuario.apellido }}</td>  <td>{{ usuario.user }}</td> <td>{{ usuario.tipo|tipo }}</td>     <td>{{ usuario.activo|sino }}</td>    <td>
+                        <td>{{ i }}</td> <td>{{ usuario.nombre }} {{ usuario.apellido }}</td>  <td>{{ usuario.user }}</td> <td>{{ usuario.tipo|tipo }}</td>     <td>{{ usuario.activo|sino }}</td> <td>{{ usuario.valido|sino }}</td>   <td>
                                     <div class="btn-group btn-group-xs">
                                         <a href="{{ path('usuarios_show', { 'id': usuario.id }) }}" data-toggle="tooltip" title="Ver" class="btn btn-default"><i class="fa fa-list-ul"></i></a>
                                         <a href="{{ path('usuarios_edit', { 'id': usuario.id }) }}" data-toggle="tooltip" title="Editar" class="btn btn-default"><i class="fa fa-edit"></i></a>

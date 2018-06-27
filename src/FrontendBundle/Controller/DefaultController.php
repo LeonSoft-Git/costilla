@@ -4,11 +4,14 @@ namespace FrontendBundle\Controller;
 
 use CoreBundle\Entity\Comentarios;
 use CoreBundle\Entity\Contacto;
+use CoreBundle\Entity\Usuarios;
 use FrontendBundle\Form\ComentarioType;
 use FrontendBundle\Form\ContactoType;
+use FrontendBundle\Form\RegistroType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
@@ -54,6 +57,10 @@ class DefaultController extends Controller
      */
     public function avisosAction($page  = 1)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user=='anon.'){
+            return $this->redirect($this->generateUrl('homepage'));
+        }
         $em = $this->getDoctrine()->getManager();
 
         $limit = 9;
@@ -225,9 +232,80 @@ class DefaultController extends Controller
     }
 
     /**
+     * @Route("/registrarse", name="registrar")
+     */
+    public function registrarAction(Request $request){
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user->getTipo()==3){
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        $form = $this->createForm(RegistroType::class,null,array(
+            'method' => 'POST',
+            'attr'=>array('id'=>'registro-form')
+        ));
+        $enviado=0;
+        $em = $this->getDoctrine()->getManager();
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            if($form->isValid()){
+                $data = $form->getData();
+                $check1 = $em->getRepository('CoreBundle:Usuarios')->findOneBy(array('email'=>$data->getEmail()));
+                $check2 = $em->getRepository('CoreBundle:Usuarios')->findOneBy(array('user'=>$data->getUser()));
+
+                if($check1 || $check2){
+                    if($check1){
+                        $form->get('email')->addError(new FormError('Email ya existe'));
+                    }
+                    if($check2){
+                        $form->get('user')->addError(new FormError('Usuario ya existe'));
+                    }
+                    $enviado = 2;
+                }else{
+                    /*$message = \Swift_Message::newInstance()
+                    ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
+                    ->setFrom($data['email'])
+                    //->setTo(array('contacto@capacitacioninformatica.com'))
+                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setBody(
+                        $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
+                        'text/html'
+                    )
+                ;*/
+                    $usuario = new Usuarios();
+                    $usuario->setNombre($data->getNombre());
+                    $usuario->setApellido($data->getApellido());
+                    $usuario->setEmail($data->getEmail());
+                    $usuario->setUser($data->getUser());
+                    $usuario->setPassword($data->getPassword());
+                    $usuario->setActivo(1);
+                    $usuario->setTipo(3);
+                    $em->persist($usuario);
+                    $em->flush();
+                    //$this->get('mailer')->send($message);
+
+                    $enviado=1;
+                }
+            }else{
+                $enviado=0;
+            }
+        }else{
+            $enviado=0;
+        }
+
+        return $this->render('@Frontend/Default/signup.html.twig',array(
+            'form' => $form->createView(),
+            'enviado' => $enviado
+        ));
+    }
+
+    /**
      * @Route("/aviso/{slug}", name="aviso-pagina")
      */
     public function avisoPaginaAction(Request $request,$slug){
+        $user = $this->get('security.token_storage')->getToken()->getUser();
+        if($user=='anon.'){
+            return $this->redirect($this->generateUrl('homepage'));
+        }
         $form = $this->createForm(ComentarioType::class,null,array(
             'method' => 'POST',
             'attr'=>array('id'=>'comentario-form')

@@ -134,6 +134,7 @@
                                 <h2>educación<br> continua</h2>
                             </div>
                         </div>
+                        {% if app.user.tipo is defined %}
                             <div class="single-blog-widget mb-50">
                                 <h3>avisos</h3>
                                 {% for a in avisos %}
@@ -152,6 +153,7 @@
                                     </div>
                                 {% endfor %}
                             </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

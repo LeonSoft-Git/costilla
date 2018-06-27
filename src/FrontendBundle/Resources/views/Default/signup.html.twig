@@ -1,0 +1,127 @@
+{% extends '@Frontend/layout.html.twig' %}
+
+{% block title %}Registro | {{ parent() }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('admin/plugins/bower_components/sweetalert/sweetalert.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('admin/plugins/bower_components/sweetalert/sweetalert.min.js') }}"></script>
+    {% if enviado==1 %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#frontend_bundle_registro_type_nombre').val('');
+                $('#frontend_bundle_registro_type_email').val('');
+                $('#frontend_bundle_registro_type_apellido').val('');
+                $('#frontend_bundle_registro_type_user').val('');
+                swal({
+                    title: "Registro Exitoso!",
+                    text: "Nuestros Administradores validarán tu acceso.<br>Recibiras un Email de Confirmación.",
+                    type: "success",
+                    html:true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "OK!",
+                    closeOnConfirm: true
+                });
+
+            });
+        </script>
+    {% elseif enviado ==2 %}
+        <script type="text/javascript">
+            $(document).ready(function () {
+                swal({
+                    title: "Error al Registrar!",
+                    text: "Algunos campos tienen errores.",
+                    type: "error",
+                    html:true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "OK!",
+                    closeOnConfirm: true
+                });
+
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <div class="banner-area-wrapper">
+        <div class="banner-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="banner-content-wrapper">
+                            <div class="banner-content">
+                                <h2>Registro</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="register-area pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <div class="login">
+                        <div class="login-form-container">
+                            <div class="login-text">
+                                <h2>Registro</h2>
+                                <span>Completa todos los campos para continuar con tu Registro.</span>
+                            </div>
+                            <div class="login-form">
+                                {{ form_start(form,  {'action':path('registrar')}) }}
+                                    {{ form_widget(form.nombre, {'attr': {'class': 'form-control','placeholder':'Nombre'} }) }}
+                                    {% if form.nombre.vars.errors|length > 0 %}
+                                        <p class="help-block">
+                                            {% for error in form.nombre.vars.errors %}
+                                                {{ error.message }} <br/>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    {{ form_widget(form.apellido, {'attr': {'class': 'form-control','placeholder':'Apellido'} }) }}
+                                    {% if form.apellido.vars.errors|length > 0 %}
+                                        <p class="help-block">
+                                            {% for error in form.apellido.vars.errors %}
+                                                {{ error.message }} <br/>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    {{ form_widget(form.email, {'attr': {'class': 'form-control','placeholder':'Email'} }) }}
+                                    {% if form.email.vars.errors|length > 0 %}
+                                        <p class="help-block">
+                                            {% for error in form.email.vars.errors %}
+                                                {{ error.message }} <br/>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    {{ form_widget(form.user, {'attr': {'class': 'form-control','placeholder':'Usuario'} }) }}
+                                    {% if form.user.vars.errors|length > 0 %}
+                                        <p class="help-block">
+                                            {% for error in form.user.vars.errors %}
+                                                {{ error.message }} <br/>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    {{ form_widget(form.password, {'attr': {'class': 'form-control','placeholder':'Contraseña'} }) }}
+                                    {% if form.password.vars.errors|length > 0 %}
+                                        <p class="help-block">
+                                            {% for error in form.password.vars.errors %}
+                                                {{ error.message }} <br/>
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    <div class="button-box">
+                                        {{ form_widget(form.registrar, {'attr': {'class ': 'default-btn'} }) }}
+                                    </div>
+                                {{ form_end(form) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
