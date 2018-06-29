@@ -4,13 +4,9 @@
     <list default="true" id="7e1ad331-16da-4083-94d7-4fcb17d34392" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/BannersController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/BannersController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/UsuariosController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/UsuariosController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/base.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/layout.html.twig" />
-      <change beforePath="$PROJECT_DIR$/web/template/css/responsive.css" afterPath="$PROJECT_DIR$/web/template/css/responsive.css" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,7 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/super/edit.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/super/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/super/show.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/SuperController.php" />
@@ -85,17 +80,18 @@
         <option value="$PROJECT_DIR$/app/Resources/views/usuarios/show.html.twig" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/comentario.html.twig" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/UsuariosController.php" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/confirmation.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/BannersController.php" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/template/css/responsive.css" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" />
       </list>
     </option>
   </component>
@@ -176,8 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,18 +193,18 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\src\AdminBundle\Controller" />
-      <recent name="C:\xampp56\htdocs\hidalgo\src\AdminBundle\Controller" />
-      <recent name="C:\xampp56\htdocs\hidalgo\src\FrontendBundle\Controller" />
-      <recent name="C:\xampp56\htdocs\hidalgo\web\template\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\src\FrontendBundle\Resources\views\mail" />
       <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\web\assets\images" />
       <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\app\Resources\views" />
       <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\src\AdminBundle\Controller" />
       <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\src\CoreBundle\Form" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\TI_CESAR\xampp\htdocs\hidalgo\src\AdminBundle\Controller" />
+      <recent name="C:\xampp56\htdocs\hidalgo\src\AdminBundle\Controller" />
+      <recent name="C:\xampp56\htdocs\hidalgo\src\FrontendBundle\Controller" />
+      <recent name="C:\xampp56\htdocs\hidalgo\web\template\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,16 +256,19 @@
       <workItem from="1530019613580" duration="24462000" />
       <workItem from="1530104833290" duration="599000" />
       <workItem from="1530135917223" duration="4406000" />
+      <workItem from="1530212753999" duration="973000" />
+      <workItem from="1530292056924" duration="63000" />
+      <workItem from="1530292244611" duration="155000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117337000" />
+    <option name="totallyTimeSpent" value="118528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35334346" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3700608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -302,13 +301,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CoreBundle/Entity/Comentarios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/comentarios/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -491,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Form/ContactoType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/usuarios/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -551,7 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3825">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -559,24 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1156">
           <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding>
-            <marker date="1530138095468" expanded="true" signature="563:622" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="584:622" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="609:622" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="751:810" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="772:810" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="797:810" ph="..." />
-            <marker date="1530138095468" expanded="true" signature="2079:2194" ph="..." />
-            <marker date="1530138095468" expanded="false" signature="2306:2318" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -584,7 +550,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="96" column="35" lean-forward="false" selection-start-line="96" selection-start-column="35" selection-end-line="96" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -600,28 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1530138834550" expanded="true" signature="563:622" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="584:622" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="609:622" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="751:810" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="772:810" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="797:810" ph="..." />
-            <marker date="1530138834550" expanded="true" signature="2079:2194" ph="..." />
-            <marker date="1530138834550" expanded="false" signature="2306:2318" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="283" column="20" lean-forward="false" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="57" />
-          <folding>
-            <element signature="e#45#79#0#PHP" expanded="true" />
-            <element signature="e#10362#10397#0#PHP" expanded="true" />
-            <element signature="e#12924#12961#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,34 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="115" column="62" lean-forward="false" selection-start-line="86" selection-start-column="52" selection-end-line="115" selection-end-column="62" />
-          <folding>
-            <marker date="1530139314336" expanded="true" signature="563:622" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="584:622" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="609:622" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="751:810" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="772:810" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="797:810" ph="..." />
-            <marker date="1530139314336" expanded="true" signature="2079:2194" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="2306:2318" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="8227:8290" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="8424:8443" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="8517:8674" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="8753:8843" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="8926:9047" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="9132:9175" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="9267:9302" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="9502:9545" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="9637:9672" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="9873:9916" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10008:10043" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10238:10281" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10373:10408" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10604:10647" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10739:10774" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="10979:11022" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="11114:11149" ph="..." />
-            <marker date="1530139314336" expanded="false" signature="11151:11157" ph=" " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,38 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="96" column="54" lean-forward="false" selection-start-line="96" selection-start-column="54" selection-end-line="96" selection-end-column="54" />
-          <folding>
-            <element signature="e#3070#3105#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1362">
-          <caret line="238" column="14" lean-forward="true" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
-          <folding>
-            <marker date="1529594450798" expanded="true" signature="289:447" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="324:436" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="4907:4940" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="4911:4940" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="4915:4940" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="5093:5188" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="5126:5188" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="5163:5188" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="6225:6237" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9336:9369" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9340:9369" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9344:9369" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9522:9617" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9555:9617" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="9592:9617" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="10660:10672" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="13434:13446" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="15440:15740" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="15537:15740" ph="..." />
-            <marker date="1529594450798" expanded="true" signature="15651:15740" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -711,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="238" column="25" lean-forward="false" selection-start-line="238" selection-start-column="25" selection-end-line="238" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -719,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1020">
           <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -727,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="187" column="0" lean-forward="true" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -735,7 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="133" column="8" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="133" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -743,7 +620,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="280" column="39" lean-forward="false" selection-start-line="280" selection-start-column="39" selection-end-line="280" selection-end-column="39" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Form/ContactoType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4095">
+          <caret line="116" column="57" lean-forward="false" selection-start-line="116" selection-start-column="57" selection-end-line="116" selection-end-column="57" />
+          <folding>
+            <element signature="e#45#79#0#PHP" expanded="true" />
+            <element signature="e#10407#10442#0#PHP" expanded="true" />
+            <element signature="e#12969#13006#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/contact.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#50#0#Twig" expanded="true" />
+            <marker date="1529594450793" expanded="true" signature="563:622" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="584:622" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="609:622" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="751:810" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="772:810" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="797:810" ph="..." />
+            <marker date="1529594450793" expanded="true" signature="2079:2194" ph="..." />
+            <marker date="1529594450793" expanded="false" signature="2306:2318" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="167" column="80" lean-forward="false" selection-start-line="167" selection-start-column="80" selection-end-line="167" selection-end-column="80" />
+          <folding>
+            <marker date="1530292119010" expanded="true" signature="289:447" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="324:436" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="4907:4940" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="4911:4940" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="4915:4940" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="5093:5188" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="5126:5188" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="5163:5188" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="6225:6237" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9336:9369" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9340:9369" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9344:9369" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9522:9617" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9555:9617" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="9592:9617" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="10660:10672" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="13435:13447" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="15441:15741" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="15538:15741" ph="..." />
+            <marker date="1530292119010" expanded="true" signature="15652:15741" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="76" column="154" lean-forward="false" selection-start-line="76" selection-start-column="154" selection-end-line="76" selection-end-column="154" />
+          <folding>
+            <marker date="1530292326889" expanded="true" signature="563:622" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="584:622" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="609:622" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="751:810" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="772:810" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="797:810" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="2079:2194" ph="..." />
+            <marker date="1530292326889" expanded="true" signature="2306:2318" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

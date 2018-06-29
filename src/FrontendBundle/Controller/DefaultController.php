@@ -102,7 +102,7 @@ class DefaultController extends Controller
 
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
-                    ->setFrom($data['email'])
+                    ->setFrom($data->getEmail())
                     //->setTo(array('contacto@capacitacioninformatica.com'))
                     ->setTo(array('cesar.rios@capacitacioninformatica.com'))
                     ->setBody(
@@ -111,10 +111,10 @@ class DefaultController extends Controller
                     )
                 ;
                 $contacto = new Contacto();
-                $contacto->setNombre($data['nombre']);
-                $contacto->setEmail($data['email']);
-                $contacto->setTelefono($data['telefono']);
-                $contacto->setMensaje($data['mensaje']);
+                $contacto->setNombre($data->getNombre());
+                $contacto->setEmail($data->getEmail());
+                $contacto->setTelefono($data->getTelefono());
+                $contacto->setMensaje($data->getMensaje());
                 $em->persist($contacto);
                 $em->flush();
                 $this->get('mailer')->send($message);
@@ -151,7 +151,7 @@ class DefaultController extends Controller
 
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
-                    ->setFrom($data['email'])
+                    ->setFrom($data->getEmail())
                     //->setTo(array('contacto@capacitacioninformatica.com'))
                     ->setTo(array('cesar.rios@capacitacioninformatica.com'))
                     ->setBody(
@@ -160,10 +160,10 @@ class DefaultController extends Controller
                     )
                 ;
                 $contacto = new Contacto();
-                $contacto->setNombre($data['nombre']);
-                $contacto->setEmail($data['email']);
-                $contacto->setTelefono($data['telefono']);
-                $contacto->setMensaje($data['mensaje']);
+                $contacto->setNombre($data->getNombre());
+                $contacto->setEmail($data->getEmail());
+                $contacto->setTelefono($data->getTelefono());
+                $contacto->setMensaje($data->getMensaje());
                 $em->persist($contacto);
                 $em->flush();
                 $this->get('mailer')->send($message);
@@ -200,7 +200,7 @@ class DefaultController extends Controller
 
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
-                    ->setFrom($data['email'])
+                    ->setFrom($data->getEmail())
                     //->setTo(array('contacto@capacitacioninformatica.com'))
                     ->setTo(array('cesar.rios@capacitacioninformatica.com'))
                     ->setBody(
@@ -209,10 +209,10 @@ class DefaultController extends Controller
                     )
                 ;
                 $contacto = new Contacto();
-                $contacto->setNombre($data['nombre']);
-                $contacto->setEmail($data['email']);
-                $contacto->setTelefono($data['telefono']);
-                $contacto->setMensaje($data['mensaje']);
+                $contacto->setNombre($data->getNombre());
+                $contacto->setEmail($data->getEmail());
+                $contacto->setTelefono($data->getTelefono());
+                $contacto->setMensaje($data->getMensaje());
                 $em->persist($contacto);
                 $em->flush();
                 $this->get('mailer')->send($message);
