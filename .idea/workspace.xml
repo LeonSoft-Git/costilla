@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e1ad331-16da-4083-94d7-4fcb17d34392" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/contacto.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/contacto.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig" afterPath="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,7 +41,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/super/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/super/show.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/SuperController.php" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Archivos.php" />
@@ -61,7 +60,6 @@
         <option value="$PROJECT_DIR$/app/Resources/views/comentarios/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/ComentariosController.php" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/avisos.html.twig" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Form/ArchivosType.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Entity/Avisos.php" />
@@ -76,11 +74,8 @@
         <option value="$PROJECT_DIR$/app/Resources/views/administradores/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/usuarios/index.html.twig" />
         <option value="$PROJECT_DIR$/src/CoreBundle/Form/UsuariosType.php" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/usuarios/show.html.twig" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/comentario.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/UsuariosController.php" />
@@ -89,9 +84,14 @@
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/BannersController.php" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/web/template/css/responsive.css" />
-        <option value="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/layoutmailing.html.twig" />
         <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/register.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/contacto.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig" />
+        <option value="$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig" />
       </list>
     </option>
   </component>
@@ -172,8 +172,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -185,6 +183,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,26 +259,27 @@
       <workItem from="1530212753999" duration="973000" />
       <workItem from="1530292056924" duration="63000" />
       <workItem from="1530292244611" duration="155000" />
+      <workItem from="1530492333385" duration="1699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118528000" />
+    <option name="totallyTimeSpent" value="120227000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3700608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37594554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -301,13 +302,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/comentarios/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CoreBundle/Form/ComentariosType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -406,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/aviso-pagina.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-358">
-          <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -497,31 +484,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="154" column="34" lean-forward="false" selection-start-line="154" selection-start-column="34" selection-end-line="154" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/acerca.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-565">
           <caret line="19" column="10" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="19" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/contacto.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="167" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -536,20 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3825">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1156">
-          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -630,33 +582,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4095">
-          <caret line="116" column="57" lean-forward="false" selection-start-line="116" selection-start-column="57" selection-end-line="116" selection-end-column="57" />
-          <folding>
-            <element signature="e#45#79#0#PHP" expanded="true" />
-            <element signature="e#10407#10442#0#PHP" expanded="true" />
-            <element signature="e#12969#13006#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/mail/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-663">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#12#50#0#Twig" expanded="true" />
-            <marker date="1529594450793" expanded="true" signature="563:622" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="584:622" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="609:622" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="751:810" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="772:810" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="797:810" ph="..." />
-            <marker date="1529594450793" expanded="true" signature="2079:2194" ph="..." />
-            <marker date="1529594450793" expanded="false" signature="2306:2318" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -664,28 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="167" column="80" lean-forward="false" selection-start-line="167" selection-start-column="80" selection-end-line="167" selection-end-column="80" />
-          <folding>
-            <marker date="1530292119010" expanded="true" signature="289:447" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="324:436" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="4907:4940" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="4911:4940" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="4915:4940" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="5093:5188" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="5126:5188" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="5163:5188" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="6225:6237" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9336:9369" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9340:9369" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9344:9369" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9522:9617" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9555:9617" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="9592:9617" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="10660:10672" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="13435:13447" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="15441:15741" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="15538:15741" ph="..." />
-            <marker date="1530292119010" expanded="true" signature="15652:15741" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,16 +600,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="76" column="154" lean-forward="false" selection-start-line="76" selection-start-column="154" selection-end-line="76" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Controller/SecurityController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/contacto.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="153" column="57" lean-forward="false" selection-start-line="153" selection-start-column="57" selection-end-line="153" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/niveles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/inscripciones.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="16" column="57" lean-forward="false" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="383" column="0" lean-forward="false" selection-start-line="383" selection-start-column="0" selection-end-line="383" selection-end-column="0" />
           <folding>
-            <marker date="1530292326889" expanded="true" signature="563:622" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="584:622" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="609:622" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="751:810" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="772:810" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="797:810" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="2079:2194" ph="..." />
-            <marker date="1530292326889" expanded="true" signature="2306:2318" ph="..." />
+            <element signature="e#45#79#0#PHP" expanded="true" />
+            <element signature="e#10388#10423#0#PHP" expanded="true" />
+            <element signature="e#12935#12972#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/signup.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="17" column="58" lean-forward="false" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FrontendBundle/Resources/views/Default/aviso-pagina.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

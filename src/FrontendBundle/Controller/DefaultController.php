@@ -103,8 +103,8 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
                     ->setFrom($data->getEmail())
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    //->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setTo(array('fradelrio@hotmail.com'))
                     ->setBody(
                         $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
                         'text/html'
@@ -152,8 +152,8 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
                     ->setFrom($data->getEmail())
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    //->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setTo(array('fradelrio@hotmail.com'))
                     ->setBody(
                         $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
                         'text/html'
@@ -201,8 +201,8 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Contacto')
                     ->setFrom($data->getEmail())
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    //->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setTo(array('fradelrio@hotmail.com','cesar.rios@capacitacioninformatica.com'))
                     ->setBody(
                         $this->renderView('@Frontend/mail/contact.html.twig',array('contacto'=>$data,)),
                         'text/html'
@@ -264,8 +264,8 @@ class DefaultController extends Controller
                     $message = \Swift_Message::newInstance()
                     ->setSubject('Miguel Hidalgo y Costilla WebPage - Registro')
                     ->setFrom($data->getEmail())
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    //->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setTo(array('fradelrio@hotmail.com'))
                     ->setBody(
                         $this->renderView('@Frontend/mail/register.html.twig',array('usuario'=>$data,)),
                         'text/html'
@@ -329,8 +329,8 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Comentario en la Pagina Web')
                     ->setFrom($usuario->getEmail())
-                    //->setTo(array('contacto@capacitacioninformatica.com'))
-                    ->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    //->setTo(array('cesar.rios@capacitacioninformatica.com'))
+                    ->setTo(array('fradelrio@hotmail.com'))
                     ->setBody(
                         $this->renderView('@Frontend/mail/comentario.html.twig',array('comentario'=>$data,'aviso'=>$aviso,'usuario'=>$usuario)),
                         'text/html'
