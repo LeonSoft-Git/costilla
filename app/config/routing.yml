@@ -46,3 +46,7 @@ core:
     resource: "@CoreBundle/Controller/"
     type:     annotation
     prefix:   /core
+
+pageNotFound:
+    path: /{path}
+    defaults: {_controller: FrontendBundle:Security:error}

@@ -30,4 +30,12 @@ class SecurityController extends Controller
             )
         );
     }
+
+    /**
+     * @Route("/error-404", name="error")
+     */
+
+    public function errorAction(){
+        return $this->render('@Admin/security/error404.html.twig');
+    }
 }
