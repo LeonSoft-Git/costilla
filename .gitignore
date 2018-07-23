@@ -20,8 +20,8 @@
 /app/config/parameters.ini
 
 # Managed by Composer
-!bin/console
-!bin/symfony_requirements
+/bin/console
+/bin/symfony_requirements
 /vendor/
 
 # Assets and user uploads
@@ -45,4 +45,5 @@
 
 .idea/*
 /.idea/vcs.xml
+/.idea/workspace.xml
 .idea/workspace.xml

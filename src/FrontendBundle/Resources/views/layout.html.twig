@@ -69,9 +69,14 @@
                             <nav>
                                 <ul>
                                     <li><a href="{{ path('homepage') }}">inicio</a></li>
-                                    <li><a href="{{ path('niveles') }}">niveles educativos</a></li>
-                                    <li><a href="{{ path('inscripciones') }}">inscripciones</a></li>
-                                    <li><a href="{{ path('contacto') }}">contacto</a></li>
+                                    {% if app.user.tipo is defined %}
+                                        <li><a href="{{ path('avisos') }}">avisos</a></li>
+                                        <li><a href="{{ path('galeria') }}">galería</a></li>
+                                    {% else %}
+                                        <li><a href="{{ path('niveles') }}">niveles educativos</a></li>
+                                        <li><a href="{{ path('inscripciones') }}">inscripciones</a></li>
+                                        <li><a href="{{ path('contacto') }}">contacto</a></li>
+                                    {% endif %}
                                 </ul>
                             </nav>
                         </div>
