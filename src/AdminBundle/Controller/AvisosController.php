@@ -40,6 +40,7 @@ class AvisosController extends Controller
      */
     public function newAction(Request $request)
     {
+        $user = $this->get('security.token_storage')->getToken()->getUser();
         $aviso = new Avisos();
         $form = $this->createForm('CoreBundle\Form\AvisosType', $aviso);
         $form->handleRequest($request);
@@ -56,7 +57,7 @@ class AvisosController extends Controller
 
                 $aviso->setImagen($fileName);
             }
-
+            $aviso->setUsuarios($user);
             $em->persist($aviso);
             $em->flush();
 
@@ -100,7 +101,7 @@ class AvisosController extends Controller
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
-
+            $user = $this->get('security.token_storage')->getToken()->getUser();
             if($aviso->getImagen()){
                 $file = $aviso->getImagen();
 
@@ -111,7 +112,7 @@ class AvisosController extends Controller
             }else{
                 $aviso->setImagen($tmp);
             }
-
+            $aviso->setUsuarios($user);
             $em->persist($aviso);
             $em->flush();
 
